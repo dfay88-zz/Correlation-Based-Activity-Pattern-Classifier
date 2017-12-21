@@ -40,25 +40,31 @@ P(a)P(b)P(a,b)^alpha                                                            
 
 P(a) represents the maximized predicted label for the current individual and P(b) is the maximized predicted label for the next member in the household. P(a,b)^alpha  represents the joint probability of predicted activity patterns segmented by person type discounted by alpha [3]. Alpha is an optimized parameter ranging 0 to 1. This adjustment procedure is run iteratively until the algorithm reaches convergence.  
 
-Method 2: 
+Method 2:  
 To update the probabilities of the initial random forest classifier, the features representing the count of different person type-activity patterns for the other household members are re-calculated based upon the initial model choices. Then the model is applied again with the updated counts and the person type-activity pattern counts are again re-calculated. This adjustment procedure is run iteratively until the algorithm reaches convergence.
 
 ### Results  
-Figure 1 compares the individual prediction accuracy of the initial random forest model to the logit model. The F1 scores of the logit model and random forest model were found to be .6127 and .7636, respectively. As is evident, the random forest model out performs the logit model for each of the three label classes and thus provides a 15% improvement in F1 score over the logit model.  
-Random Forest  
-![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)
+Figure 1 compares the individual prediction accuracy of the initial random forest model to the logit model. The F1 scores of the logit model and random forest model were found to be .6127 and .7636, respectively. As is evident, the random forest model out performs the logit model for each of the three label classes and thus provides a 15% improvement in F1 score over the logit model.
 
-Logit
-![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/logit_confusion_matrix.png)
-Fig. 1: Confusion Matrices of Individual Fit Measures
+Random Forest   
+
+![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)  
+
+Logit  
+
+![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/logit_confusion_matrix.png)  
+
+Fig. 1: Confusion Matrices of Individual Fit Measures  
 
 Figure 2 compares the aggregate share fit performance for ML method 1 and 2 as well as the logit model. For ML method 1 and 2 the shares for each adjustment is visualized to see the performance of the algorithm over each iteration. For brevity, only the full-time worker person type is visualized for comparison.  The logit model was calibrated to replicate the observed aggregate shares exactly; thus, it outperforms both method 1 and method 2. Method 1 does provide an adjustment which improves the fit by decreasing the initial random forest models over predictions and increasing the initial models under predictions. However, method 2 accentuates both the over and under predictions.  
 
-ML Method 1
-![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)
+ML Method 1  
 
-ML Method 2
-![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)
+![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)  
+ML Method 2  
+
+![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)  
+
 Fig. 2: Comparison of Daily Activity Patterns Distributions
  
  
