@@ -60,10 +60,10 @@ Figure 2 compares the aggregate share fit performance for ML method 1 and 2 as w
 
 ML Method 1  
 
-![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)  
+![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/method_1_shares.png)  
 ML Method 2  
 
-![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)  
+![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/method_2_shares.png)  
 
 Fig. 2: Comparison of Daily Activity Patterns Distributions
  
