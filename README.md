@@ -46,9 +46,7 @@ To update the probabilities of the initial random forest classifier, the feature
 ### Results  
 Figure 1 compares the individual prediction accuracy of the initial random forest model to the logit model. The F1 scores of the logit model and random forest model were found to be .6127 and .7636, respectively. As is evident, the random forest model out performs the logit model for each of the three label classes and thus provides a 15% improvement in F1 score over the logit model.  
 
-
-                          Random Forest Model                                                                          Logit Model
-			  ![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)
+![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)
             
 Fig. 1: Confusion Matrices of Individual Fit Measures
 
