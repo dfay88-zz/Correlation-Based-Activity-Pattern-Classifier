@@ -15,8 +15,8 @@ In this regard, ML methods offer a wide range of additional options for discrete
 In most ABMs, individual DAP types are classified into three main categories: 1=Mandatory travel pattern, 2=Non-mandatory travel pattern, and 3=At-home pattern [1,3,4,5].  A mandatory travel pattern is a person who makes at least one work, university, or school trip during the day. A non-mandatory travel pattern involves at least one non-mandatory trip, with no mandatory trips taken. At-home pattern describes a person who does not participate in out-of-home activities and makes no trips.
 It is important to model DAP types for all household members simultaneously due to strong intra-household interactions [5,1]. Tis leads to a simultaneous choice model for Coordinated modeling of DAP type (CDAP) [1] where a trinary choice model is applied to all household members jointly. The utility function of this joint model incorporated strong joint participation “bonuses” when different household members choose the same pattern type. However, a principal drawback of this approach is an inevitable “explosion” in number of alternatives of the joint choice with either growing household size or adding details to the DAP type itself.
 In the current research, we compare the logit model described above with several ML algorithms. There are two important aspects of CDAP that are considered in these comparisons: 
-	* Precision of DAP predicted for each household member at the individual and aggregate levels and identification of the key explanatory variables; in this regard the research objective was to improve the model fit and better identify variable combinations and non-linear/discrete effects.
-	* Intra-household interactions; in this regard the research objective was to find a method to resolve the combinatorial explosion of the set of alternatives pertinent to standard CDAP formulations. 
+* Precision of DAP predicted for each household member at the individual and aggregate levels and identification of the key explanatory variables; in this regard the research objective was to improve the model fit and better identify variable combinations and non-linear/discrete effects.
+* Intra-household interactions; in this regard the research objective was to find a method to resolve the combinatorial explosion of the set of alternatives pertinent to standard CDAP formulations. 
 ### Methodology
 ML in Transportation Planning  
 Most model applications for transportation planning require an unbiased aggregate share fit while most ML methods do not emphasize aggregate share accuracy instead focusing on individual accuracy. However, analysis related to specific travel markets and individual behavior has put more emphasis on the accuracy of individual fit.  ML provides options to implement a framework which prioritizes individual accuracy and is subsequently adjusted to closer match aggregate shares. 
@@ -44,9 +44,11 @@ Method 2:
 To update the probabilities of the initial random forest classifier, the features representing the count of different person type-activity patterns for the other household members are re-calculated based upon the initial model choices. Then the model is applied again with the updated counts and the person type-activity pattern counts are again re-calculated. This adjustment procedure is run iteratively until the algorithm reaches convergence.
 
 ### Results  
-Figure 1 compares the individual prediction accuracy of the initial random forest model to the logit model. The F1 scores of the logit model and random forest model were found to be .6127 and .7636, respectively. As is evident, the random forest model out performs the logit model for each of the three label classes and thus provides a 15% improvement in F1 score over the logit model.  
+Figure 1 compares the individual prediction accuracy of the initial random forest model to the logit model. The F1 scores of the logit model and random forest model were found to be .6127 and .7636, respectively. As is evident, the random forest model out performs the logit model for each of the three label classes and thus provides a 15% improvement in F1 score over the logit model.  
+
 
                           Random Forest Model                                                                          Logit Model
+			  ![alt text](https://github.com/dfay88/Correlation-Based-Activity-Pattern-Classifier/blob/master/random_forest_test_confusion_matrix.png)
             
 Fig. 1: Confusion Matrices of Individual Fit Measures
 
