@@ -1,0 +1,16 @@
+,feature
+first,DIST
+left,AGE
+right,AGE
+left_left,"HINCCAT1_$49,999 or less"
+left_right,"HINCCAT1_$49,999 or less"
+right_left,"HINCCAT1_$49,999 or less"
+right_right,"HINCCAT1_$49,999 or less"
+left_left_left,
+left_left_right,
+left_right_left,
+left_right_right,
+right_left_left,
+right_left_right,
+right_right_left,
+right_right_right,
